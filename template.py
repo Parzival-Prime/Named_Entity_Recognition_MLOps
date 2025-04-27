@@ -33,7 +33,7 @@ list_of_files = [
     f"{main_directory}/utils/__init__.py",
     f"{main_directory}/utils/main_utils.py",
     "app.py",
-    "requirements.txt",
+    "requirements.txt", 
     "Dockerfile",
     ".dockerignore",
     "demo.py",
