@@ -1,0 +1,25 @@
+Building Pipeline:
+1> Create a GitHub repo and clone it in local machine (Add Experiments).
+2> Add src folder along with all components (run them individually).
+3> Add data, models, reports directories to .gitignore file.
+4> Now git add, commit, push
+
+setting up dvc pipeline (without params)
+5> Create dvc.yaml file and add stages to it.
+6> dvc init then do dvc repo to test the pipeline automation. (check dvc dag)
+7> now git add, commit, push 
+
+Setting up dvc pipeline (with params)
+8> add params.yaml file
+9> Add the params setup (mentioned below)
+10> Do "dvc repro" again to test the pipeline along with the params
+11> Now git add, commit, push
+
+Experiments with DVC:
+12> pip install dvclive 
+13> Add the dvclive code block
+14> Do "dvc exp run", it will create a new dvc.yaml(if not already there) and dvclive directory (each run will be considered as an experiment)
+15> Do "dvc exp show" on terminal to see experiments or use extension on VsCode (instal dvc extension)
+16> Do "dvc exp remove {exp-name}" to remove exp (optional) and "dvc exp apply {exp-name}" to reproduce prev exp
+17> Change params, re-run code (to produce new wxperiments)
+18> Now git add-commit-push 
