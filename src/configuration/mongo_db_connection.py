@@ -5,7 +5,7 @@ import pymongo
 import certifi
 
 import pymongo
-from src.exception import MyException
+from src.exception import CustomException, handle_exception
 from src.logger import logging
 from src.constants import DATABASE_NAME, MONOGDB_URI
 
@@ -37,6 +37,7 @@ class MongoDBClient:
     
     client = None
     
+    @handle_exception
     def __init__(self, database_name: str = DATABASE_NAME, mongodb_connection_uri: str = MONOGDB_URI) -> None:
         """
         Initializes a connection to MongoDB Database. If no existing connection is found it establishes a new one.
@@ -60,4 +61,4 @@ class MongoDBClient:
             logger.info('MongoDB connection successful.')
                 
         except Exception as e:
-            raise MyException(e, sys)
+            raise CustomException(e)
