@@ -1,7 +1,3 @@
-from src.logger import logging
-from demo1 import second_file_func
+from src.configuration.azure_connection import BlobClient
 
-logger = logging.getLogger('demo')
-
-logger.info('This is from demo.py')
-second_file_func()
+blobclient = BlobClient().blob_client

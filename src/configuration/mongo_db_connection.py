@@ -4,7 +4,6 @@ import sys
 import pymongo
 import certifi
 
-import pymongo
 from src.exception import CustomException, handle_exception
 from src.logger import logging
 from src.constants import DATABASE_NAME, MONOGDB_URI

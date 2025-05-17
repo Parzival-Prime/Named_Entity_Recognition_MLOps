@@ -1,7 +1,7 @@
 from src.logger import logging
 import traceback
 
-logger = logging.getLogger('error')
+logger = logging.getLogger('exception')
 
 
 

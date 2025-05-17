@@ -33,6 +33,7 @@ os.makedirs(log_dir_path, exist_ok=True)
 #             self.logger.addHandler(consolehandler)
 
 
+
 def configureLogger():
     logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
