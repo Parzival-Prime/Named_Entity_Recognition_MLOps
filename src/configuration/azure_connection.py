@@ -11,9 +11,9 @@ from src.logger import logging
 
 logger = logging.getLogger('azure_connection')
 
-class BlobClient:
+class CreateBlobServiceClient:
     
-    blob_client = None
+    blob_service_client = None
 
     @handle_exception
     def __init__(self):
@@ -22,7 +22,7 @@ class BlobClient:
         try: 
             logger.info('Connecting to Azure Storage')
             
-            if BlobClient.blob_client==None:
+            if CreateBlobServiceClient.blob_service_client==None:
                 
                 __tenant_id = AZURE_TENANT_ID
                 __client_id = AZURE_CLIENT_ID
@@ -44,7 +44,7 @@ class BlobClient:
                     client_secret=__client_secret
                 )
                 
-                BlobClient.blob_client = BlobServiceClient(account_url=__storage_account_url, credential=__credential)
+                CreateBlobServiceClient.blob_service_client = BlobServiceClient(account_url=__storage_account_url, credential=__credential)
 
             logger.info('Azure Storage Connection Successful!')
 
