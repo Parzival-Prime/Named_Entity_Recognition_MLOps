@@ -2,7 +2,7 @@ from src.logger import logging
 from src.exception import handle_exception, CustomException
 from src.configuration.azure_connection import CreateBlobServiceClient
 
-from azure.core.exceptions import ResourceNotFoundError #type: ignore
+from azure.core.exceptions import ResourceNotFoundError
 
 import pickle
 

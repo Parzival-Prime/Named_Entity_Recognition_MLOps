@@ -3,6 +3,7 @@ models
 reports
 logs
 artifacts
+notebook/mlruns/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

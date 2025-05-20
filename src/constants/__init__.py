@@ -1,9 +1,12 @@
 import os
 from datetime import datetime
-from dotenv import load_dotenv #type: ignore
-from pathlib import Path
+from dotenv import load_dotenv
+from from_root import from_root
 
-load_dotenv()
+ROOT_DIR = from_root()
+
+env_file_path = os.path.join(ROOT_DIR, '.env')
+load_dotenv(env_file_path)
 
 # MongoDB
 DATABASE_NAME='ner-mlops'
@@ -24,7 +27,24 @@ AZURE_CLIENT_ID=os.getenv('AZURE_CLIENT_ID')
 AZURE_CLIENT_SECRET=os.getenv('AZURE_CLIENT_SECRET')
 AZURE_STORAGE_ACCOUNT_URL=os.getenv('AZURE_STORAGE_ACCOUNT_URL')
 
-ROOT_DIR=Path(__file__).parent.parent.parent
+#Pipeline
+PIPELINE_NAME: str = ''
+ARTIFACT_DIR: str = 'artifact'
 
+# Files
+MODEL_FILE_NAME: str = 'model.h5' 
+OUTPUT_MODEL_NAME: str = 'model.onnx'
+FILE_NAME: str = 'data.csv'
+TRAIN_FILE_NAME: str = 'train.csv'
+TEST_FILE_NAME: str = 'test.csv'
 
+SCHEMA_FILE_PATH: str = os.path.join('config', 'schema.yaml')
+
+# Data Ingestion
+DATA_INGESTION_COLLECTION_NAME: str = 'Project1-Data'
+DATA_INGESTION_DIR_NAME: str = 'data_ingestion'
+DATA_INGESTION_RAW_DATA_DIR: str = 'raw_data'
+
+DATA_VALIDATION_DIR_NAME: str = 'data_validation'
+DATA_VALIDATION_REPORT_FILE_NAME: str = 'report.yaml'
 

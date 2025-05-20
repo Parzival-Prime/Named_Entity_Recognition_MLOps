@@ -1,0 +1,11 @@
+columns:
+  - Sentence: category
+  - Word: category
+  - POS: category
+  - Tag: category
+
+categorical_columns:
+  - Sentence
+  - Word
+  - POS
+  - Tag 

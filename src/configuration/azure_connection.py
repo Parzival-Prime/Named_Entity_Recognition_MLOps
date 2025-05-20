@@ -9,7 +9,7 @@ from src.exception import CustomException, handle_exception
 from src.logger import logging
 
 
-logger = logging.getLogger('azure_connection')
+logger = logging.getLogger('Azure Connection')
 
 class CreateBlobServiceClient:
     
