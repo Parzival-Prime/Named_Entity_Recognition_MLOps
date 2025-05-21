@@ -8,6 +8,8 @@ from src.constants import LOG_DIR, LOG_FILENAME, MAX_LOG_SIZE, BACKUP_COUNT
 log_dir_path = os.path.join(from_root(), LOG_DIR)
 os.makedirs(log_dir_path, exist_ok=True)
 
+logging.getLogger("azure.core.pipeline.policies.http_logging_policy").setLevel(logging.WARNING)
+
 
 def configureLogger():
     logger = logging.getLogger()

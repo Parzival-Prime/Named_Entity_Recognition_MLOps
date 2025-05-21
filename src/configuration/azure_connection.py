@@ -1,8 +1,8 @@
 import os
 import uuid
 
-from azure.identity import ClientSecretCredential #type: ignore
-from azure.storage.blob import BlobServiceClient #type: ignore
+from azure.identity import ClientSecretCredential 
+from azure.storage.blob import BlobServiceClient
 
 from src.constants import AZURE_CLIENT_ID, AZURE_CLIENT_SECRET, AZURE_STORAGE_ACCOUNT_URL, AZURE_TENANT_ID
 from src.exception import CustomException, handle_exception
